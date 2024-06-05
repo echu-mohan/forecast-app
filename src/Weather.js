@@ -11,13 +11,27 @@ export default function Weather() {
   const [weather, setWeather] = useState(null);
   const [forecastData, setForecastData] = useState([]);
   const now = new Date();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[now.getDay()];
 
   function setCurrentTime() {
     let minute = now.getMinutes();
-    if (now.getMinutes() <= 9) {
+    let hours = now.getHours();
+    if (minute < 10) {
       minute = `0:${now.getMinutes()}`;
     }
-    setTime(`${now.getHours()}:${minute}`);
+    if (hours < 10) {
+      hours = `0:${now.getHours()}`;
+    }
+    setTime(`${hours}:${minute}`);
   }
 
   function updateCity(event) {
@@ -42,14 +56,15 @@ export default function Weather() {
   }
   return (
     <>
-      <City weather={weather} time={time} />
+      <City weather={weather} time={time} day={day} />
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="search-form">
         <input
           type="search"
           placeholder="Enter a city.."
           required
           className="search-input common-details "
+          autoFocus="on"
           onChange={updateCity}
         />
         <input type="submit" value="Search" className="common-details" />

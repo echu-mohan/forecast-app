@@ -17,7 +17,9 @@ body {
   width: 200px;
   border-radius: 0.2rem;
 }
-
+.search-form {
+  margin-top: 20px;
+}
 /* .search-button {
   background-color: #fcfcfa;
   margin-left: 20px;
@@ -48,11 +50,13 @@ body {
   font-size: 40px;
   color: #d1dfdf;
 }
-.forecast-icon {
-  width: 250px;
-  height: 250px;
+.forecast-icon canvas {
+  width: 150px;
+  height: 150px;
   display: block;
   margin: 0 auto;
+  margin-bottom: 40px;
+  margin-top: 20px;
 }
 .common-font-weight {
   font-weight: 600;
@@ -69,4 +73,13 @@ body {
   margin-top: 40px;
   font-size: 30px;
   color: #d1dfdf;
+}
+.temp-unit {
+  color: #d1dfdf;
+  font-size: 26px;
+  font-weight: 400px;
+  position: relative;
+  top: -40px;
+  margin-left: 5px;
+  line-height: 1;
 }

@@ -16,7 +16,9 @@ export default function City(props) {
         {city}
       </div>
       <div className="last-updates common-font col-6 d-flex justify-content-center">
-        Last Update:{props.time}
+        <span>
+          {props.day} : {props.time}
+        </span>
       </div>
     </div>
   );
