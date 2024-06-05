@@ -50,6 +50,10 @@ body {
   font-size: 40px;
   color: #d1dfdf;
 }
+.text-grey {
+  font-size: 40px;
+  color: #7b7c7d;
+}
 .forecast-icon canvas {
   width: 150px;
   height: 150px;

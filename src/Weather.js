@@ -70,7 +70,7 @@ export default function Weather() {
         <input type="submit" value="Search" className="common-details" />
       </form>
       <Climate weather={weather} />
-      <Forecast response={forecastData} />
+      {/* <Forecast response={forecastData} /> */}
       {/* create a component forecast and pass the forecast value  */}
     </>
   );

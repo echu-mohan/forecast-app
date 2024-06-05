@@ -12,7 +12,7 @@ export default function Climate(props) {
   if (weather.status === "not found") {
     return <p>{weather.message}</p>;
   }
-  const { condition, temperature } = weather;
+  const { condition, temperature, wind } = weather;
 
   return (
     <div>
@@ -30,6 +30,19 @@ export default function Climate(props) {
       <div className="text-capitalize common-font-weight description-details">
         {" "}
         {condition.description}
+      </div>
+
+      <div className="text-grey">
+        <div>
+          <span className="text-capitalize common-font  ">Humidity:</span>
+          <span className="text-capitalize common-font ">
+            {temperature.humidity}%
+          </span>
+        </div>
+        <div>
+          <span className="text-capitalize common-font ">Wind:</span>
+          <span className="text-capitalize common-font ">{wind.speed}km/h</span>
+        </div>
       </div>
     </div>
   );
