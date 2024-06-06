@@ -7,7 +7,7 @@ import "./App.css";
 export default function App() {
   return (
     <div className="app h-100 h-75 mw-100 w-100">
-      <div className="container border border-dark rounded-top mt-10">
+      <div className="container border border-dark rounded-top">
         <header>
           <Weather />
 
