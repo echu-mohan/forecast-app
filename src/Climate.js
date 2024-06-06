@@ -27,7 +27,7 @@ export default function Climate(props) {
           <span className="temp-unit">°C</span>
         </span>
       </div>
-      <div className="text-capitalize common-font-weight description-details">
+      <div className="text-grey text-capitalize common-font-weight common-font description-details">
         {" "}
         {condition.description}
       </div>
